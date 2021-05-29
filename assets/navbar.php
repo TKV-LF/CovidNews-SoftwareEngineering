@@ -83,6 +83,7 @@
             }
           }
 </style>
+
 <nav class="navbar navbar-expand-sm" style="background-image: linear-gradient(
               to right,
               #37CCFF,
@@ -109,20 +110,19 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tài khoản</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Đăng nhập</a>
-                    <a class="dropdown-item" href="#">Đăng ký</a>
+                    <a class="dropdown-item" href="admin">Đăng nhập</a>
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form method="post" action="search.php" class="form-inline my-2 my-lg-0">
             <p class="my-auto mx-4" style="color: white !important;">
             <?php
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
                 echo "Bây giờ là  " . date("h:i:s")." Ngày ".date("d-m-Y");
             ?>
             </p>
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Tìm kiếm</button>
+            <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search">
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
         </form>
     </div>
 </nav>
